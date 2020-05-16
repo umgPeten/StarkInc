@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="MONTO_PERMITIDO" directorySegmentName="seg_0" id="7489C140-AA1C-4534-71EE-95F3F911E707">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<schemaObject>D5ECC24B-A4CE-2E50-85D9-9539F3488BB4</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>4BCC214D-A15C-FF71-7F15-98784B5552B8</segment>
+<tableSpace>42634248-C0E7-EA39-BA84-8FEA86F24DCD</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="MONTO_MIN" id="3A2B8DC7-B038-34D6-5C0E-9BD5A4555E45">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_MONTO_PERMITIDO" id="48D77855-884C-EB28-5393-8FDB71868325">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MONTO_MAX" id="B0150C22-A853-881D-78BA-8D9752E985CC">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="MONTO_PERMITIDO_PK" id="1B288967-E686-2A6F-79C3-A3D8D72B8B09">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<schemaObject>D5ECC24B-A4CE-2E50-85D9-9539F3488BB4</schemaObject>
+<segment>715A13BD-71C2-AF83-F8EE-4AED676B2F85</segment>
+<tableSpace>42634248-C0E7-EA39-BA84-8FEA86F24DCD</tableSpace>
+<indexSegment>715A13BD-71C2-AF83-F8EE-4AED676B2F85</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

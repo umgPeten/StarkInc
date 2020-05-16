@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7CC71BF7-6A81-C9EC-65FE-17942D6FAF37" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="EMPLEADOS">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>EMPLEADOS</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_EMPLEADO" id="AA4EDFD0-F3E5-BCDD-C75D-CC5BF1369E71">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>EMPLEADOS</sourceObjSchema>
+<sourceObjName>ID_EMPLEADO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FK_ID_INFORMACION" id="BE0AF872-76D9-E46B-53E3-59C1DA1384E6">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>EMPLEADOS</sourceObjSchema>
+<sourceObjName>FK_ID_INFORMACION</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A2BC9775-AD10-6AF6-BA24-EC6EDD05BA94" referredColumn="A33FC893-4C86-0EE5-4CAC-26290BD290B4"/>
+</associations>
+</Column>
+<Column name="FK_ID_PUESTO" id="B06EBDA1-32A4-405D-0D79-F26862D684FA">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>EMPLEADOS</sourceObjSchema>
+<sourceObjName>FK_ID_PUESTO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5DEF9EA7-34C3-A313-87C3-98CACF684D3E" referredColumn="E2D0278E-69AF-6664-D56C-BC95D39151F5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="64FB3604-CBE3-B1EA-E3C6-EC9BEEA10D2F" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="EMPLEADOS_PK">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>SYS_C007537</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:17 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA4EDFD0-F3E5-BCDD-C75D-CC5BF1369E71"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="235A0DCB-BBB8-8BD8-6ACC-B783056FB4FA" name="SYS_C007538">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE0AF872-76D9-E46B-53E3-59C1DA1384E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB423074-55F1-3FB9-C838-FBFC778165AB" name="SYS_C007539">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B06EBDA1-32A4-405D-0D79-F26862D684FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

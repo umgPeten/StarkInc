@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F57719A8-3FA6-1CB5-5ADE-2A8D27E8A3AB" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="CHEQUERAS">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>CHEQUERAS</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CHEQUERA" id="9684C0EA-8100-B9EE-3FF0-471678ED1085">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUERAS</sourceObjSchema>
+<sourceObjName>ID_CHEQUERA</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FK_NUMERO_CUENTA" id="1E505643-AE09-82DA-4155-47B37EAB5DD1">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUERAS</sourceObjSchema>
+<sourceObjName>FK_NUMERO_CUENTA</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D959C17F-9986-04CA-8A93-FB9FA55046A0" referredColumn="E6F9FC01-60D7-482E-58CF-362753C4233F"/>
+</associations>
+</Column>
+<Column name="STOCK" id="83293BC2-1E25-9B52-E167-EDA2AA6F5067">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUERAS</sourceObjSchema>
+<sourceObjName>STOCK</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INICIO" id="8D9CFB38-AFF8-F9FE-22B6-8B7019D05B6D">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUERAS</sourceObjSchema>
+<sourceObjName>INICIO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIN" id="57D4D4FD-3381-B2FB-7DED-10B9B3CFE9D3">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUERAS</sourceObjSchema>
+<sourceObjName>FIN</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B237A722-B1EB-3149-1EC4-6A9B162A8338" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="CHEQUERAS_PK">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>SYS_C007575</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:17 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9684C0EA-8100-B9EE-3FF0-471678ED1085"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40F7C572-2521-4254-0732-75F32EFCEF81" name="SYS_C007576">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E505643-AE09-82DA-4155-47B37EAB5DD1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

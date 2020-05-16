@@ -1,0 +1,157 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3F6DB293-271E-8ADB-1D3C-084AB373C331" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="USUARIOS">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>USUARIOS</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USUARIO" id="506E97AF-6865-3B0F-0119-15F87D481C8B">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>USUARIOS</sourceObjSchema>
+<sourceObjName>USUARIO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTRASENIA" id="F64151D0-7D6A-B512-AB74-27F622554A0B">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>USUARIOS</sourceObjSchema>
+<sourceObjName>CONTRASENIA</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ULTIMA_SESION" id="FAB8B325-8955-98CB-5857-8CAF0F4A63D5">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>USUARIOS</sourceObjSchema>
+<sourceObjName>ULTIMA_SESION</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FK_ID_EMPLEADO" id="8CC93D88-2B6A-B7C6-8340-00BBFC1DEF56">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>USUARIOS</sourceObjSchema>
+<sourceObjName>FK_ID_EMPLEADO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7DBC8C61-0E0E-FC35-49E8-5BFD6430DB53" referredColumn="AA4EDFD0-F3E5-BCDD-C75D-CC5BF1369E71"/>
+</associations>
+</Column>
+<Column name="FK_ID_ROL" id="DFD3154E-0144-7693-6942-F9E2F55D9571">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>USUARIOS</sourceObjSchema>
+<sourceObjName>FK_ID_ROL</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="924B488E-7058-2A73-1939-6DE5D9A47A32" referredColumn="FC50D9AC-A4B1-D181-B070-5FBBD3E9F8A2"/>
+</associations>
+</Column>
+<Column name="FK_ID_MONTO" id="501A00B8-A97A-219B-B120-29858BB0040E">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>USUARIOS</sourceObjSchema>
+<sourceObjName>FK_ID_MONTO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D4C819EC-E6F5-77DE-9D05-40F3EA34A6A5" referredColumn="48D77855-884C-EB28-5393-8FDB71868325"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="104E12DF-0976-B805-FD35-83F861C4208E" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="USUARIOS_PK">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>SYS_C007549</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:17 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="506E97AF-6865-3B0F-0119-15F87D481C8B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AA51B5CE-ABA8-1A5E-2D9C-9FC14CA28656" name="SYS_C007550">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8CC93D88-2B6A-B7C6-8340-00BBFC1DEF56"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2668B45C-ECAF-C227-3108-3AE0547E76B0" name="SYS_C007551">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFD3154E-0144-7693-6942-F9E2F55D9571"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EE4FFCF-CC60-04E9-4886-2C5FE7B5158C" name="SYS_C007552">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="501A00B8-A97A-219B-B120-29858BB0040E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

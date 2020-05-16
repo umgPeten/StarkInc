@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A10781B5-502A-C01F-62B2-4A25BC07E817" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="ROLES">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>ROLES</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ROL" id="FC50D9AC-A4B1-D181-B070-5FBBD3E9F8A2">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ROLES</sourceObjSchema>
+<sourceObjName>ID_ROL</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_ROL" id="B0D5C8DE-2231-7125-FCB0-F62F4AD5BB4D">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ROLES</sourceObjSchema>
+<sourceObjName>NOMBRE_ROL</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D6F8B035-90D2-3A39-7902-40BA05E6FAD3" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="ROLES_PK">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>SYS_C007533</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:17 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC50D9AC-A4B1-D181-B070-5FBBD3E9F8A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

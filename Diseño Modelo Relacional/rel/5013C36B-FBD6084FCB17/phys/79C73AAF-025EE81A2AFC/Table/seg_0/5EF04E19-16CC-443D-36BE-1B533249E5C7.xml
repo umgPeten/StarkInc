@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="TIPO_IDENTIFICACION" directorySegmentName="seg_0" id="5EF04E19-16CC-443D-36BE-1B533249E5C7">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<schemaObject>D5ECC24B-A4CE-2E50-85D9-9539F3488BB4</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>4BCC214D-A15C-FF71-7F15-98784B5552B8</segment>
+<tableSpace>42634248-C0E7-EA39-BA84-8FEA86F24DCD</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NOMBRE_TIPO" id="121666C0-03BF-7612-0975-7A8FC43AE04C">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_TIPO" id="CD8F4AA1-D09D-62A9-2753-B87791336EFC">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TIPO_IDENTIFICACION_PK" id="4DF5BD76-B1E8-CDA3-BE06-57B16E47DBC1">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<schemaObject>D5ECC24B-A4CE-2E50-85D9-9539F3488BB4</schemaObject>
+<segment>715A13BD-71C2-AF83-F8EE-4AED676B2F85</segment>
+<tableSpace>42634248-C0E7-EA39-BA84-8FEA86F24DCD</tableSpace>
+<indexSegment>715A13BD-71C2-AF83-F8EE-4AED676B2F85</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

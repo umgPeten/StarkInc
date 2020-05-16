@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Diseño Modelo Relacional" id="070BFE86-2914-EE3D-B977-C33327DA9019" version="3.5">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 02:39:07 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>070BFE86-2914-EE3D-B977-C33327DA9019</designId>
+</OSDM_Design>

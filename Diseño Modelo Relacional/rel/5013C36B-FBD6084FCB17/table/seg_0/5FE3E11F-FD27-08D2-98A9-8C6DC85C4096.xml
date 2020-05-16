@@ -1,0 +1,172 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5FE3E11F-FD27-08D2-98A9-8C6DC85C4096" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="CHEQUES">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>CHEQUES</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CHEQUE" id="B13FBDB2-A2F7-55FA-1855-7E5CC8BE204C">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUES</sourceObjSchema>
+<sourceObjName>ID_CHEQUE</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MONTO" id="307E8A78-0A35-347D-F21E-1671C72AD3C3">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUES</sourceObjSchema>
+<sourceObjName>MONTO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA" id="EE17BACC-61A3-10DF-190A-086D872BA6F7">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUES</sourceObjSchema>
+<sourceObjName>FECHA</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LUGAR" id="DD8B34FA-A86A-4EE1-1F47-0F236B9A8B39">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUES</sourceObjSchema>
+<sourceObjName>LUGAR</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>35 BYTE</dataTypeSize>
+<ownDataTypeParameters>35 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FK_ID_PROVEEDOR" id="0BF5DD24-4E21-2C0E-D9B5-2BFD89999F9D">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUES</sourceObjSchema>
+<sourceObjName>FK_ID_PROVEEDOR</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="02EE7941-9D92-CA6C-14EE-62C061C98D6E" referredColumn="B46E7D39-87DC-C365-C83B-EE77FF442F68"/>
+</associations>
+</Column>
+<Column name="FK_ID_ESTADO" id="D1C6F3D1-91B2-FD16-6F46-AD6CE648ED2A">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUES</sourceObjSchema>
+<sourceObjName>FK_ID_ESTADO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E81C314B-DD89-C51C-C8CF-D772F9E477BF" referredColumn="38841883-0FC2-4FCA-97E2-4FEAA3FD4179"/>
+</associations>
+</Column>
+<Column name="FK_ID_CHEQUERA" id="CCEF99B7-1D1B-92C1-A99B-C3B08A5CB6EC">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>CHEQUES</sourceObjSchema>
+<sourceObjName>FK_ID_CHEQUERA</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="985C7C2C-4873-6CAA-44A8-1E68032450A6" referredColumn="9684C0EA-8100-B9EE-3FF0-471678ED1085"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0D655BBC-6CC3-E6F4-2559-E8BEDAFD2C3D" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="CHEQUES_PK">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>SYS_C007587</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:17 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B13FBDB2-A2F7-55FA-1855-7E5CC8BE204C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="238C26BB-920B-AB00-68D0-166F8838480A" name="SYS_C007588">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BF5DD24-4E21-2C0E-D9B5-2BFD89999F9D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A4114649-D41A-E295-B091-0395E3363794" name="SYS_C007589">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1C6F3D1-91B2-FD16-6F46-AD6CE648ED2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C9753754-D317-7F27-FD41-A5F0B77EF878" name="SYS_C007590">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CCEF99B7-1D1B-92C1-A99B-C3B08A5CB6EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

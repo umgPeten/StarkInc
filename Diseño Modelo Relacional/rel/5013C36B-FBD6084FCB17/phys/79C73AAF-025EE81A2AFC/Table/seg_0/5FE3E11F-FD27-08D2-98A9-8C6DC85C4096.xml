@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CHEQUES" directorySegmentName="seg_0" id="5FE3E11F-FD27-08D2-98A9-8C6DC85C4096">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<schemaObject>D5ECC24B-A4CE-2E50-85D9-9539F3488BB4</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>4BCC214D-A15C-FF71-7F15-98784B5552B8</segment>
+<tableSpace>42634248-C0E7-EA39-BA84-8FEA86F24DCD</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FK_ID_PROVEEDOR" id="0BF5DD24-4E21-2C0E-D9B5-2BFD89999F9D">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MONTO" id="307E8A78-0A35-347D-F21E-1671C72AD3C3">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CHEQUE" id="B13FBDB2-A2F7-55FA-1855-7E5CC8BE204C">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FK_ID_CHEQUERA" id="CCEF99B7-1D1B-92C1-A99B-C3B08A5CB6EC">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FK_ID_ESTADO" id="D1C6F3D1-91B2-FD16-6F46-AD6CE648ED2A">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LUGAR" id="DD8B34FA-A86A-4EE1-1F47-0F236B9A8B39">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FECHA" id="EE17BACC-61A3-10DF-190A-086D872BA6F7">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C007588" id="238C26BB-920B-AB00-68D0-166F8838480A">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C007589" id="A4114649-D41A-E295-B091-0395E3363794">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C007590" id="C9753754-D317-7F27-FD41-A5F0B77EF878">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CHEQUES_PK" id="0D655BBC-6CC3-E6F4-2559-E8BEDAFD2C3D">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<schemaObject>D5ECC24B-A4CE-2E50-85D9-9539F3488BB4</schemaObject>
+<segment>715A13BD-71C2-AF83-F8EE-4AED676B2F85</segment>
+<tableSpace>42634248-C0E7-EA39-BA84-8FEA86F24DCD</tableSpace>
+<indexSegment>715A13BD-71C2-AF83-F8EE-4AED676B2F85</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

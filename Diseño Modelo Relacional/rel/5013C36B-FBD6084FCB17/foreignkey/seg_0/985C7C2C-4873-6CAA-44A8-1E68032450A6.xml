@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="985C7C2C-4873-6CAA-44A8-1E68032450A6" containerWithKeyObject="5FE3E11F-FD27-08D2-98A9-8C6DC85C4096" localFKIndex="C9753754-D317-7F27-FD41-A5F0B77EF878" name="SYS_C007590">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>SYS_C007590</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<referredTableLongName>ADMINISTRADOR.CHEQUERAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F57719A8-3FA6-1CB5-5ADE-2A8D27E8A3AB</referredTableID>
+<keyObject>B237A722-B1EB-3149-1EC4-6A9B162A8338</keyObject>
+<referredKeyID>B237A722-B1EB-3149-1EC4-6A9B162A8338</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_CHEQUERA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

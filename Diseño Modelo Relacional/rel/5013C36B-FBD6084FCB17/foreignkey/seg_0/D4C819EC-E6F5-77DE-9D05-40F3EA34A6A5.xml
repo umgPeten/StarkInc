@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D4C819EC-E6F5-77DE-9D05-40F3EA34A6A5" containerWithKeyObject="3F6DB293-271E-8ADB-1D3C-084AB373C331" localFKIndex="6EE4FFCF-CC60-04E9-4886-2C5FE7B5158C" name="SYS_C007552">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>SYS_C007552</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<referredTableLongName>ADMINISTRADOR.MONTO_PERMITIDO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7489C140-AA1C-4534-71EE-95F3F911E707</referredTableID>
+<keyObject>1B288967-E686-2A6F-79C3-A3D8D72B8B09</keyObject>
+<referredKeyID>1B288967-E686-2A6F-79C3-A3D8D72B8B09</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_MONTO_PERMITIDO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

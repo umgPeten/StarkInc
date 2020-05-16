@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8DF66892-9720-2EBF-B7A7-8A58AD6E7171" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="PUESTOS">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>PUESTOS</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PUESTO" id="E2D0278E-69AF-6664-D56C-BC95D39151F5">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>PUESTOS</sourceObjSchema>
+<sourceObjName>ID_PUESTO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_PUESTO" id="9B4AED76-64AF-0A3E-11BF-8A44B559AD97">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>PUESTOS</sourceObjSchema>
+<sourceObjName>NOMBRE_PUESTO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FK_ID_DEPARTAMENTO" id="16B8CD7E-EA07-9EF7-9D7C-A4C24E59456B">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>PUESTOS</sourceObjSchema>
+<sourceObjName>FK_ID_DEPARTAMENTO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="40F52898-0A20-9ACD-9165-2D45B6ECDE85" referredColumn="D09891A7-3E9B-F165-A751-5FEF5A4E8DC7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F4072CC5-F13C-F93C-3A25-5735E0F70656" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="PUESTOS_PK">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>SYS_C007530</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:17 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2D0278E-69AF-6664-D56C-BC95D39151F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B8335C30-62CF-B5B1-2ED4-427EC8B55C53" name="SYS_C007531">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16B8CD7E-EA07-9EF7-9D7C-A4C24E59456B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

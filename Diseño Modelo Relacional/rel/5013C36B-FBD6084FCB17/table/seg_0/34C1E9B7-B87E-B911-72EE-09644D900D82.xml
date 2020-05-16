@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="34C1E9B7-B87E-B911-72EE-09644D900D82" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="OPERACIONES">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>OPERACIONES</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_OPERACION" id="028D4828-915A-90C7-5AE3-3673824F9BA0">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>OPERACIONES</sourceObjSchema>
+<sourceObjName>ID_OPERACION</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FK_USUARIO" id="9E0A91DB-1561-53EB-3E1D-8BE3A85BC279">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>OPERACIONES</sourceObjSchema>
+<sourceObjName>FK_USUARIO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0F9D236-7E3E-15B4-1359-C9ABFADDBD58" referredColumn="506E97AF-6865-3B0F-0119-15F87D481C8B"/>
+</associations>
+</Column>
+<Column name="FK_ID_CHEQUE" id="A1FA483C-89A3-79A4-9A41-57684C82422D">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>OPERACIONES</sourceObjSchema>
+<sourceObjName>FK_ID_CHEQUE</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3B21D5B9-2EF7-D8F9-DAB5-1EEFA7C6168C" referredColumn="B13FBDB2-A2F7-55FA-1855-7E5CC8BE204C"/>
+</associations>
+</Column>
+<Column name="FECHA" id="D054CED5-EA4B-D268-74D9-B8FB9F609E75">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>OPERACIONES</sourceObjSchema>
+<sourceObjName>FECHA</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FK_ID_ESTADO" id="02B66D98-3ADE-9445-8691-2D1F5535686D">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>OPERACIONES</sourceObjSchema>
+<sourceObjName>FK_ID_ESTADO</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="530CC8AB-8069-825A-8E3A-04A4F63773B1" referredColumn="38841883-0FC2-4FCA-97E2-4FEAA3FD4179"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="95A58E44-B2B0-DBB1-9945-0D5DDCDF4379" schemaObject="D5ECC24B-A4CE-2E50-85D9-9539F3488BB4" name="OPERACIONES_PK">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>SYS_C007596</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:17 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="028D4828-915A-90C7-5AE3-3673824F9BA0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FB59ECA2-B0FD-A91C-0BA5-6EE2694068C2" name="SYS_C007597">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9E0A91DB-1561-53EB-3E1D-8BE3A85BC279"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D678A99-3B1B-CF6C-A934-93FD481A8D70" name="SYS_C007598">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A1FA483C-89A3-79A4-9A41-57684C82422D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E6758E5C-2542-BD67-F0DA-2707ABAF3F66" name="SYS_C007599">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02B66D98-3ADE-9445-8691-2D1F5535686D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

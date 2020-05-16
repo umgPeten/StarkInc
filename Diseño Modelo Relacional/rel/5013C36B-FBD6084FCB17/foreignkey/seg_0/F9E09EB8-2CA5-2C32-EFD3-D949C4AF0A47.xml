@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F9E09EB8-2CA5-2C32-EFD3-D949C4AF0A47" containerWithKeyObject="6E73C642-24C4-F8E3-A05B-4E1BC12D4437" localFKIndex="AC6ADC3C-7198-DC6F-D819-EBDD8D978338" name="SYS_C007569">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>SYS_C007569</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<referredTableLongName>ADMINISTRADOR.MONEDA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C32A15E0-1FD8-685F-DC0A-E0CEFC6CAE22</referredTableID>
+<keyObject>55540438-9F03-03EF-A61D-3355F6D2432F</keyObject>
+<referredKeyID>55540438-9F03-03EF-A61D-3355F6D2432F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_MONEDA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

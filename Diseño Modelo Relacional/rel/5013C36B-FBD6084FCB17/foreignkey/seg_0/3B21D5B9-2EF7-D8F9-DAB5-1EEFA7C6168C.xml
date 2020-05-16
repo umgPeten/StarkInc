@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3B21D5B9-2EF7-D8F9-DAB5-1EEFA7C6168C" containerWithKeyObject="34C1E9B7-B87E-B911-72EE-09644D900D82" localFKIndex="8D678A99-3B1B-CF6C-A934-93FD481A8D70" name="SYS_C007598">
+<sourceConnName>Stark Inc</sourceConnName>
+<sourceObjSchema>ADMINISTRADOR</sourceObjSchema>
+<sourceObjName>SYS_C007598</sourceObjName>
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<referredTableLongName>ADMINISTRADOR.CHEQUES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5FE3E11F-FD27-08D2-98A9-8C6DC85C4096</referredTableID>
+<keyObject>0D655BBC-6CC3-E6F4-2559-E8BEDAFD2C3D</keyObject>
+<referredKeyID>0D655BBC-6CC3-E6F4-2559-E8BEDAFD2C3D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_CHEQUE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

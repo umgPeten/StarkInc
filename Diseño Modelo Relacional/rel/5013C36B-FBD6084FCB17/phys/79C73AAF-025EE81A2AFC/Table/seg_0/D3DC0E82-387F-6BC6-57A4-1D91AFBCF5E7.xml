@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CONTACTOS" directorySegmentName="seg_0" id="D3DC0E82-387F-6BC6-57A4-1D91AFBCF5E7">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<schemaObject>D5ECC24B-A4CE-2E50-85D9-9539F3488BB4</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>4BCC214D-A15C-FF71-7F15-98784B5552B8</segment>
+<tableSpace>42634248-C0E7-EA39-BA84-8FEA86F24DCD</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_CONTACTO" id="3594F490-6FF7-E2D4-A417-A876EEE0049B">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FK_ID_INFORMACION" id="4F46FF78-5C8C-FCA7-7BA2-260F354CB51F">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FK_ID_PROVEEDOR" id="967A3EC2-AE78-16AF-00CB-28DE58D88862">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C007525" id="038B2360-54F2-7F93-7342-29C1A239FF29">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C007526" id="71DD0D45-9ACD-E33C-9455-ECB22840A68A">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CONTACTOS_PK" id="CFE91B29-1A32-0F2A-2E3F-70A33709F7E6">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<schemaObject>D5ECC24B-A4CE-2E50-85D9-9539F3488BB4</schemaObject>
+<segment>715A13BD-71C2-AF83-F8EE-4AED676B2F85</segment>
+<tableSpace>42634248-C0E7-EA39-BA84-8FEA86F24DCD</tableSpace>
+<indexSegment>715A13BD-71C2-AF83-F8EE-4AED676B2F85</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

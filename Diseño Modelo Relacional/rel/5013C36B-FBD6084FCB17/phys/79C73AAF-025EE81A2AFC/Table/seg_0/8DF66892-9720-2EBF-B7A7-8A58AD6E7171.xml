@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="PUESTOS" directorySegmentName="seg_0" id="8DF66892-9720-2EBF-B7A7-8A58AD6E7171">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<schemaObject>D5ECC24B-A4CE-2E50-85D9-9539F3488BB4</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>4BCC214D-A15C-FF71-7F15-98784B5552B8</segment>
+<tableSpace>42634248-C0E7-EA39-BA84-8FEA86F24DCD</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FK_ID_DEPARTAMENTO" id="16B8CD7E-EA07-9EF7-9D7C-A4C24E59456B">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOMBRE_PUESTO" id="9B4AED76-64AF-0A3E-11BF-8A44B559AD97">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_PUESTO" id="E2D0278E-69AF-6664-D56C-BC95D39151F5">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:15 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C007531" id="B8335C30-62CF-B5B1-2ED4-427EC8B55C53">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PUESTOS_PK" id="F4072CC5-F13C-F93C-3A25-5735E0F70656">
+<createdBy>Furla</createdBy>
+<createdTime>2020-05-16 04:42:18 UTC</createdTime>
+<ownerDesignName>Diseño Modelo Relacional</ownerDesignName>
+<schemaObject>D5ECC24B-A4CE-2E50-85D9-9539F3488BB4</schemaObject>
+<segment>715A13BD-71C2-AF83-F8EE-4AED676B2F85</segment>
+<tableSpace>42634248-C0E7-EA39-BA84-8FEA86F24DCD</tableSpace>
+<indexSegment>715A13BD-71C2-AF83-F8EE-4AED676B2F85</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>
