@@ -13,7 +13,7 @@ public class Conexion {
     private Connection con = null;
     private static Conexion instancia;
     private static final String USER_ADMIN = "ADMINISTRADOR";
-    private static final String PASS_ADMIN = "ADMIN";
+    private static final String PASS_ADMIN = "ADMI";
     private static final String URL = "jdbc:oracle:thin:@localhost:1521/orclpdb";
     private static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
 
@@ -31,6 +31,7 @@ public class Conexion {
     public Connection Conectar() {
 
         cargarDriver();
+        
         try {
             con = DriverManager.getConnection(URL, USER_ADMIN, PASS_ADMIN);
         } catch (SQLException ex) {
