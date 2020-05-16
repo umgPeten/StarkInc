@@ -12,9 +12,9 @@ public class Conexion {
 
     private Connection con = null;
     private static Conexion instancia;
-    private static final String USER_ADMIN = "administrador";
-    private static final String PASS_ADMIN = "admin";
-    private static final String URL = "jdbc:oracle:thin:@localhost:1521:XE";
+    private static final String USER_ADMIN = "ADMINISTRADOR";
+    private static final String PASS_ADMIN = "ADMIN";
+    private static final String URL = "jdbc:oracle:thin:@localhost:1521/orclpdb";
     private static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
 
     public Conexion() {
