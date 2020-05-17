@@ -3,6 +3,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import umg.modelo.Conexion;
 import umg.modelo.LoginDao;
+import umg.negocio.Login;
 
 
 public class prueba {
@@ -10,9 +11,12 @@ public class prueba {
        public static void main(String[] args) throws SQLException {
         
            LoginDao logindao = new LoginDao();
-           boolean esLogueado = logindao.validate("mgongasdasdora", "admin");
-           System.out.println(esLogueado);
+           Login login = new Login("asdasd", "asdasd");
+           System.out.println(logindao.validate(login));
+           
     
+           
+       
        }
     
 }
