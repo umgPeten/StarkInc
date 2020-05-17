@@ -5,9 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Types;
 import oracle.jdbc.OracleCallableStatement;
-import oracle.jdbc.OracleResultSet;
 
 /**
  *
@@ -15,15 +13,12 @@ import oracle.jdbc.OracleResultSet;
  */
 public class LoginDao {
 
-    private Connection con = null;
-    private ResultSet rs = null;
-    private CallableStatement cs = null;
+    private Connection con;
+    private ResultSet rs;
+    private CallableStatement cs;
     private static LoginDao instancia;
-    private PreparedStatement ps = null;
-    
-    public LoginDao() {
-    }
-    
+    private PreparedStatement ps;
+
     public static LoginDao getInstancia() {
         if (instancia == null) {
             instancia = new LoginDao();
@@ -46,35 +41,38 @@ public class LoginDao {
             }
         }
     }
-    
+
     public boolean validate(String username, String password) throws SQLException {
-        boolean status = false;
+        boolean acceso = false;
         try {
             con = Conexion.getInstancia().Conectar();
 
-            cs = con.prepareCall("{Begin call validateLogin(?,?,?); End;}");
+            cs = con.prepareCall("{call validateLogin(?,?,?)}");
 
             cs.registerOutParameter(1, java.sql.JDBCType.INTEGER);
             cs.setString(2, username);
             cs.setString(3, password);
 
             cs.execute();
-
-            
-
-            /*if (encontrado > 0) {
-                acceder = true;
-            }*/
+            int n = cs.getInt(1);
+            System.out.println("Se encontro " + n + " coincidencias");
+            if (n > 0) {
+                System.out.println("retornar true");
+                acceso = true;
+            } else {
+                acceso = false;
+            }
         } catch (SQLException ex) {
 
             printSQLException(ex);
-
+            acceso = false;
         } finally {
             rs.close();
             cs.close();
             con.close();
         }
-        return status;
+        System.out.println("retornar false");
+        return acceso;
     }
 
 }
