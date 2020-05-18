@@ -2,7 +2,7 @@
     <h3>Login Account</h3>
 </div>
 <div class="login-form">
-    <form action="">
+    <form action="<%=request.getContextPath()%>/login" method="POST">
         <div class="form-group">
             <label for="username">Usuario</label>
             <input type="text" id="username" name="username" required="required">

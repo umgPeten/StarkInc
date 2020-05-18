@@ -13,10 +13,6 @@ public class prueba {
            LoginDao logindao = new LoginDao();
            Login login = new Login("asdasd", "asdasd");
            System.out.println(logindao.validate(login));
-           
-    
-           
-       
        }
     
 }
