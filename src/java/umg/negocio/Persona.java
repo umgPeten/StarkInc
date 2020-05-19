@@ -10,19 +10,22 @@ public class Persona {
     private String apellido;
     private String telefono;
     private String direccion;
+    private int idgenero;
     private char genero;
     private Identificacion identificacion;
+    private String fechaNac;
 
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, String telefono, String direccion, char genero, Identificacion identificacion) {
+    public Persona(String nombre, String apellido, String telefono, String direccion, int idgenero, Identificacion identificacion, String fechaNac) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.direccion = direccion;
         this.genero = genero;
         this.identificacion = identificacion;
+        this.fechaNac = fechaNac;
     }
 
     public String getNombre() {
@@ -41,6 +44,14 @@ public class Persona {
         this.apellido = apellido;
     }
 
+    public String getFechaNac() {
+        return fechaNac;
+    }
+
+    public void setFechaNac(String fechaNac) {
+        this.fechaNac = fechaNac;
+    }
+        
     public String getTelefono() {
         return telefono;
     }
@@ -72,6 +83,16 @@ public class Persona {
     public void setIdentificacion(Identificacion identificacion) {
         this.identificacion = identificacion;
     }
+
+    public int getIdgenero() {
+        return idgenero;
+    }
+
+    public void setIdgenero(int idgenero) {
+        this.idgenero = idgenero;
+    }
+    
+    
 
     @Override
     public String toString() {

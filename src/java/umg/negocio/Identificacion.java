@@ -6,30 +6,30 @@ package umg.negocio;
  */
 public class Identificacion {
 
-    private String identificacion;
-    private String tipo_identificacion;
+    private int num_id;
+    private int tipo_identificacion;
 
-    public Identificacion(String identificacion, String tipo_identificacion) {
-        this.identificacion = identificacion;
+    public Identificacion(int num_id, int tipo_identificacion) {
+        this.num_id = num_id;
         this.tipo_identificacion = tipo_identificacion;
     }
 
     public Identificacion() {
     }
 
-    public String getIdentificacion() {
-        return identificacion;
+    public int getNum_id() {
+        return num_id;
     }
 
-    public void setIdentificacion(String identificacion) {
-        this.identificacion = identificacion;
+    public void setIdentificacion(int num_id) {
+        this.num_id = num_id;
     }
 
-    public String getTipo_identificacion() {
+    public int getTipo_identificacion() {
         return tipo_identificacion;
     }
 
-    public void setTipo_identificacion(String tipo_identificacion) {
+    public void setTipo_identificacion(int tipo_identificacion) {
         this.tipo_identificacion = tipo_identificacion;
     }
 

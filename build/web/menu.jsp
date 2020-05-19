@@ -46,10 +46,14 @@
                                 <a href="#">Usuarios</a>
                             </li>
                             <li>
-                                <a href="#">Empleados</a>
+                                <a href="empleados.jsp">Empleados</a>
                             </li>
                             <li>
                                 <a href="#">Contactos</a>
+                            </li>
+                            
+                            <li>
+                                <a href="form_agregar_usuario.jsp">Agregar Nuevo</a>
                             </li>
                         </ul>
                     </li>
