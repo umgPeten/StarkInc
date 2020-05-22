@@ -5,8 +5,11 @@
 --%>
 <!DOCTYPE html>
 <html>
-    <%@include file="cabecero.jsp"%>
-
+    <head>
+        <%@include file="cabecero.jsp"%>
+        <link href="js/plugins/node-waves/waves.css" rel="stylesheet" />
+        <title>Stark Inc - Cheques</title>
+    </head>
     <body>
         <%@include file="menu.jsp"%>
 
@@ -92,5 +95,6 @@
 
 
         <%@include file="libreriasJS.jsp" %>
+        <script src="js/plugins/node-waves/waves.js"></script>
     </body>
 </html>

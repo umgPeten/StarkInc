@@ -168,6 +168,7 @@ CREATE TABLE chequeras (
         REFERENCES cuenta ( numero_cuenta )
 );
 
+
 -- CREACION TABLA ESTADOS
 
 CREATE TABLE estados (
@@ -192,6 +193,8 @@ CREATE TABLE cheques (
     FOREIGN KEY ( fk_id_chequera )
         REFERENCES chequeras ( id_chequera )
 );
+
+
 
 --CREACION TABLA OPERACIONES
 

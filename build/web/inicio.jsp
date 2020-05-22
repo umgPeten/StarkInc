@@ -3,11 +3,19 @@
     Created on : 16-may-2020, 22:44:38
     Author     : mikesb
 --%>
+
 <!DOCTYPE html>
 <html>
-<%@include file="cabecero.jsp"%>
-<%@include file="menu.jsp"%>
+    <header>
+
+        <%@include file="cabecero.jsp"%>
+        <title>Stark Inc  -  Inicio</title>
+    </header>
+    <body>
+        <%@include file="menu.jsp"%>
 
 
+        <%@include file="libreriasJS.jsp" %>
+    </body>
 </html>
 

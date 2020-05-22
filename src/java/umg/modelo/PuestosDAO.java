@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 import umg.negocio.Departamento;
 import umg.negocio.Empleado;
 import umg.negocio.Puesto;
+import umg.negocio.Rol;
 
 /**
  *
@@ -33,15 +34,46 @@ public class PuestosDAO {
         return instancia;
     }
 
-    public ArrayList<Puesto> getPuestos() throws SQLException {
+     public ArrayList<Departamento> getDepartamentos() throws SQLException {
+        con = Conexion.getInstancia().Conectar();
+        ArrayList<Departamento> departamentos = new ArrayList<>();
+        Departamento departamento;
+
+        try {
+            cs = con.prepareCall("{call GET_DEPA_PUESTO_ROL(?,?,?)}");
+            cs.registerOutParameter(1, java.sql.JDBCType.REF_CURSOR);
+            cs.setInt(2, DEPARTAMENTOS);
+            cs.setInt(3, 0);
+            cs.execute();
+            rs = (ResultSet) cs.getObject(1);
+
+            while (rs.next()) {
+                departamento = new Departamento();
+                departamento.setId_departamento(rs.getInt(1));
+                departamento.setDepartamento(rs.getString(2));
+                departamentos.add(departamento);
+            }
+
+        } catch (SQLException ex) {
+            printSQLException(ex);
+        } finally {
+            rs.close();
+            cs.close();
+            con.close();
+        }
+        return departamentos;
+    }
+    
+    public ArrayList<Puesto> getPuestos(int id_departamento) throws SQLException {
         con = Conexion.getInstancia().Conectar();
         ArrayList<Puesto> puestos = new ArrayList<>();
         Puesto puesto;
 
         try {
-            cs = con.prepareCall("{call GET_DEPA_PUESTO_ROL(?,?)}");
+            cs = con.prepareCall("{call GET_DEPA_PUESTO_ROL(?,?,?)}");
             cs.registerOutParameter(1, java.sql.JDBCType.REF_CURSOR);
             cs.setInt(2, PUESTOS);
+            cs.setInt(3, id_departamento);
             cs.execute();
             rs = (ResultSet) cs.getObject(1);
 
@@ -61,35 +93,35 @@ public class PuestosDAO {
         }
         return puestos;
     }
-    
-    
-    public ArrayList<Departamento> getDepartamentos() throws SQLException {
-        con = Conexion.getInstancia().Conectar();
-        ArrayList<Departamento> departamentos = new ArrayList<>();
-        Departamento departamento;
 
+    public ArrayList<Rol> getRoles() throws SQLException {
+        ArrayList<Rol> roles = new ArrayList<>();
+        Rol rol;
+        con = Conexion.getInstancia().Conectar();
         try {
-            cs = con.prepareCall("{call GET_DEPA_PUESTO_ROL(?,?)}");
+            
+            cs = con.prepareCall("{call GET_DEPA_PUESTO_ROL(?,?,?)}");
             cs.registerOutParameter(1, java.sql.JDBCType.REF_CURSOR);
-            cs.setInt(2, DEPARTAMENTOS);
+            cs.setInt(2, ROLES);
+            cs.setInt(3, 0);
             cs.execute();
+           
             rs = (ResultSet) cs.getObject(1);
             
-            while(rs.next()) {
-                departamento = new Departamento();
-                departamento.setId_departamento(rs.getInt(1));
-                departamento.setDepartamento(rs.getString(2));
-                departamentos.add(departamento);
+            while (rs.next()) {
+                rol = new Rol();
+                rol.setId_rol(rs.getInt(1));
+                rol.setRol(rs.getString(2));
+                roles.add(rol);
             }
-
         } catch (SQLException ex) {
             printSQLException(ex);
         } finally {
+            con.close();
             rs.close();
             cs.close();
-            con.close();
         }
-        return departamentos;
+        return roles;
     }
 
     public void printSQLException(SQLException ex) {

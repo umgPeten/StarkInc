@@ -8,17 +8,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import umg.modelo.LoginDao;
+import umg.modelo.UsuarioDao;
 import umg.negocio.Login;
+import umg.negocio.UsuarioDTO;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
     LoginDao logindao;
+    UsuarioDao userDAO;
 
     public void init() {
         logindao = new LoginDao();
+        userDAO = new UsuarioDao();
     }
-    
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
@@ -28,14 +32,12 @@ public class LoginServlet extends HttpServlet {
 
         try {
             if (logindao.validate(login)) {
+                
 
-                HttpSession session = req.getSession();
-                session.setAttribute("username", username);
+                HttpSession session = req.getSession(true);
+                session.setAttribute("usuario", username);
                 resp.sendRedirect("inicio.jsp");
-
             } else {
-                HttpSession session = req.getSession();
-                session.setAttribute("username", username);
                 resp.sendRedirect("login.jsp");
             }
 

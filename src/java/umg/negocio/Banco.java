@@ -16,6 +16,9 @@ public class Banco {
         this.nombre = nombre;
         this.cuentas = cuentas;
     }
+    public Banco(){
+        
+    }
 
     public int getId() {
         return id;

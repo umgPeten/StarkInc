@@ -9,6 +9,7 @@ public class Cuenta {
     private String nombre;
     private double fondos;
     private String moneda;
+    private String tipo_cuenta;
     private Banco banco;
     private Chequera chequera;
 
@@ -28,6 +29,14 @@ public class Cuenta {
         this.fondos = fondos;
         this.moneda = moneda;
         this.banco = banco;
+    }
+
+    public String getTipo_cuenta() {
+        return tipo_cuenta;
+    }
+
+    public void setTipo_cuenta(String tipo_cuenta) {
+        this.tipo_cuenta = tipo_cuenta;
     }
 
     public Banco getBanco() {

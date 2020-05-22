@@ -4,7 +4,20 @@
 <%@page import="umg.negocio.Departamento"%>
 <!DOCTYPE html>
 <html>
-    <%@include file="cabecero.jsp"%>
+    <head>
+        <%@include file="cabecero.jsp"%>
+
+        <title>Stark Inc - Agregar Usuarios</title>
+
+
+        <script type="text/javascript">
+            function combo_departamento() {
+                $(#)
+            }
+
+        </script>
+
+    </head>
     <body>
         <%@include file="menu.jsp"%>
         <section class="content">
@@ -121,7 +134,6 @@
                                                 Masculino
                                             </label>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -131,8 +143,8 @@
                                     <div class="form-group">
                                         <div class="form-line">
                                             <label>Departamento</label>
-                                            <select id="inputDepartamento" class="form-control" name="departamento">
-                                                <option selected>Seleccione</option>
+                                            <select id="inputDepartamento" class="form-control" name="departamento" onchange="combo_departamento()">
+
                                                 <%
                                                     Departamento departamento;
                                                     PuestosDAO puestosDAO = new PuestosDAO();
@@ -140,12 +152,12 @@
                                                     Iterator it = puestos.iterator();
                                                     while (it.hasNext()) {
                                                         departamento = (Departamento) it.next();
-                                                    
+
                                                 %>
-                                                <option value = "<%departamento.getId_departamento();%>"><%out.print(departamento.getDepartamento());%></option>
+                                                <option value = "<%out.print(departamento.getId_departamento());%>"><%out.print(departamento.getDepartamento());%></option>
                                                 <%
                                                     }
-                                                    %>
+                                                %>
                                             </select>
                                         </div>
                                     </div>
@@ -157,12 +169,7 @@
                                             <label>Puestos</label>
                                             <select id="inputRol" class="form-control" name="puesto">
                                                 <option selected>Seleccione el puesto</option>
-                                                <option value="1">Administrador</option>
-                                                <option value="2">Programador</option>
-                                                <option value="3">Cajero</option>
-                                                <option value="4">Generador</option>
-                                                <option value="5">Auditor</option>
-                                                <option value="6">Gerente</option>         
+                                                <option value="1">Administrador</option>             
                                             </select>
                                         </div>
                                     </div>    
@@ -179,17 +186,15 @@
                                 </div>
                             </div>
                         </form>
+                                         
+                                            
+                                            
                     </div>
 
                 </div>
             </div
         </section>
-
-
-
-
-
-
         <%@include file="libreriasJS.jsp"%>
+        <script src="js/plugins/node-waves/waves.js"></script>
     </body>
 </html>

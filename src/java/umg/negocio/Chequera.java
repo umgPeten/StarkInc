@@ -6,26 +6,34 @@ package umg.negocio;
  */
 public class Chequera {
     
-    private int id;
+    private String id;
     private int stock;
     private int inicio;
     private int fin;
+    private Cuenta cuenta;
 
     public Chequera() {
     }
 
-    public Chequera(int id, int stock, int inicio, int fin) {
+    public Chequera(String id, int stock, int inicio, int fin, Cuenta cuenta) {
         this.id = id;
         this.stock = stock;
         this.inicio = inicio;
         this.fin = fin;
     }
 
-    public int getId() {
+    public Cuenta getCuenta() {
+        return cuenta;
+    }
+
+    public void setCuenta(Cuenta cuenta) {
+        this.cuenta = cuenta;
+    }
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
