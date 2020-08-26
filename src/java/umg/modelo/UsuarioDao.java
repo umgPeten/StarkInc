@@ -16,9 +16,11 @@ import umg.negocio.UsuarioDTO;
  * @author mikesb
  */
 public class UsuarioDao {
-
+    //variables para obtener todos empleados, solo un empleado, un usuario o varios usuarios
     public static final int GET_ALL_EMPLOYES = 1;
     public static final int GET_ONLY_EMPLOYES = 2;
+    public static final int GET_USER = 1;
+    public static final int GET_USER_EDIT = 2;
     public static final int GET_USERS = 3;
     private Connection con;
     private ResultSet rs;
@@ -34,13 +36,13 @@ public class UsuarioDao {
         return instancia;
     }
 
-    public Object[] insertarEmpleado(EmpleadoDTO empDTO) throws SQLException {
-        con = Conexion.getInstancia().Conectar();
+    public Object[] insertarEmpleado(EmpleadoDTO empDTO, int id_rol) throws SQLException {
+        con = Conexion.getInstancia().Conectar(id_rol);
         Object[] objetos = null;
         int errorCode = 0;
         String msg = "Sin errores";
         try {
-            cs = con.prepareCall("{call insertarEmpleado(?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call ADMINISTRADOR.insertarEmpleado(?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.setInt(1, 1);
             cs.setInt(2, empDTO.getIdentificacion());
             cs.setInt(3, empDTO.getTipo_id());
@@ -74,14 +76,14 @@ public class UsuarioDao {
         return objetos;
     }
 
-    public ArrayList<Empleado> obtenerEmpleados(int tipo) throws SQLException {
-        con = Conexion.getInstancia().Conectar();
+    public ArrayList<Empleado> obtenerEmpleados(int tipo, int id_rol) throws SQLException {
+        con = Conexion.getInstancia().Conectar(id_rol);
         ArrayList<Empleado> empleados = new ArrayList<>();
         Empleado empleado;
         Puesto puesto = new Puesto();
 
         try {
-            cs = con.prepareCall("{call obtenerEmpleados(?,?)}");
+            cs = con.prepareCall("{call ADMINISTRADOR.obtenerEmpleados(?,?)}");
             cs.registerOutParameter(1, java.sql.JDBCType.REF_CURSOR);
             if (tipo == GET_ALL_EMPLOYES) {
                 cs.setInt(2, GET_ALL_EMPLOYES);
@@ -127,11 +129,11 @@ public class UsuarioDao {
         return empleados;
     }
 
-    public ArrayList<UsuarioDTO> get_usuarios() throws SQLException {
+    public ArrayList<UsuarioDTO> get_usuarios(int id_rol) throws SQLException {
         con = Conexion.getInstancia().Conectar();
         ArrayList<UsuarioDTO> usuarios = new ArrayList<>();
         try {
-            cs = con.prepareCall("{call obtenerEmpleados(?,?)}");
+            cs = con.prepareCall("{call ADMINISTRADOR.obtenerEmpleados(?,?)}");
             cs.registerOutParameter(1, java.sql.JDBCType.REF_CURSOR);
             cs.setInt(2, GET_USERS);
 
@@ -148,7 +150,7 @@ public class UsuarioDao {
                 userDTO.setRol(rs.getString(5));
                 userDTO.setDepartamento(departamento);
                 usuarios.add(userDTO);
-                
+
             }
 
         } catch (SQLException ex) {
@@ -161,19 +163,23 @@ public class UsuarioDao {
         return usuarios;
     }
 
-    public boolean insertarUsuario(UsuarioDTO usuarioDTO) throws SQLException {
-        con = Conexion.getInstancia().Conectar();
+    public boolean insertarUsuario(UsuarioDTO usuarioDTO, int id_rol) throws SQLException {
+        con = Conexion.getInstancia().Conectar(id_rol);
         System.out.println(usuarioDTO.toString());
         boolean exitoso = false;
         try {
-            cs = con.prepareCall("{call INSERTAR_USUARIO(?,?,?,?,?)}");
+            cs = con.prepareCall("{call ADMINISTRADOR.INSERTAR_USUARIO(?,?,?,?,?,?)}");
             cs.setString(1, usuarioDTO.getUsernamae());
             cs.setInt(2, usuarioDTO.getId_empleado());
             cs.setInt(3, usuarioDTO.getId_rol());
             cs.setInt(4, usuarioDTO.getMontoMinimo());
             cs.setInt(5, usuarioDTO.getMontoMaximo());
-
-            exitoso = cs.execute();
+            cs.registerOutParameter(6, java.sql.JDBCType.INTEGER);
+            cs.execute();
+            int result = cs.getInt(6);
+            if (result == 1) {
+                exitoso = true;
+            }
 
         } catch (SQLException ex) {
             printSQLException(ex);
@@ -184,32 +190,84 @@ public class UsuarioDao {
         return exitoso;
     }
 
-    public UsuarioDTO get_usuario(String usuario) {
-        con = Conexion.getInstancia().Conectar();
-        UsuarioDTO usuarioDTO = new UsuarioDTO();
+    public UsuarioDTO get_usuario(String usuario, int tipo, int id_rol) {
+        con = Conexion.getInstancia().Conectar(id_rol);
+        UsuarioDTO usuarioDTO = null;
         try {
-            cs = con.prepareCall("{call obtener_usuario(?,?)}");
+            cs = con.prepareCall("{call ADMINISTRADOR.obtener_usuario(?,?,?)}");
             cs.setString(1, usuario);
             cs.registerOutParameter(2, java.sql.JDBCType.REF_CURSOR);
-            cs.execute();
-            rs = (ResultSet) cs.getObject(2);
 
-            if (rs.next()) {
+            switch (tipo) {
+                case 1:
+                    cs.setInt(3, GET_USER);
+                    cs.execute();
+                    rs = (ResultSet) cs.getObject(2);
 
-                String nombre = rs.getString(1);
-                String apellido = rs.getString(2);
+                    if (rs.next()) {
+                        usuarioDTO = new UsuarioDTO();
+                        String nombre = rs.getString(1);
+                        String apellido = rs.getString(2);
 
-                usuarioDTO.setFullname(nombre + " " + apellido);
-                usuarioDTO.setUsernamae(rs.getString(3));
-                usuarioDTO.setId_rol(rs.getInt(4));
-                usuarioDTO.setRol(rs.getString(5));
+                        usuarioDTO.setFullname(nombre + " " + apellido);
+                        usuarioDTO.setUsernamae(rs.getString(3));
+                        usuarioDTO.setId_rol(rs.getInt(4));
+                        usuarioDTO.setRol(rs.getString(5));
+                    }
+                    break;
+                case 2:
+                    cs.setInt(3, GET_USER_EDIT);
+                    cs.execute();
+                    rs = (ResultSet) cs.getObject(2);
+
+                    if (rs.next()) {
+                        usuarioDTO = new UsuarioDTO();
+                        usuarioDTO.setNombre(rs.getString(1));
+                        usuarioDTO.setApellido(rs.getString(2));
+                        usuarioDTO.setRol(rs.getString(3));
+                        usuarioDTO.setMontoMaximo(rs.getInt(4));
+                        usuarioDTO.setMontoMinimo(rs.getInt(5));
+                    }
+                    break;
+
             }
 
         } catch (SQLException ex) {
             printSQLException(ex);
+
         }
         return usuarioDTO;
 
+    }
+
+    /*METODO PARA MODIFICAR MONTO MAXIMO Y MINIMO DE UN USUARIO DEL SISTEMA */
+    public boolean editar_usuario(UsuarioDTO usuarioDTO, int id_rol) throws SQLException {
+        boolean respuesta = false;
+        con = Conexion.getInstancia().Conectar(id_rol);
+        try {
+            
+            cs = con.prepareCall("call ADMINISTRADOR.ACTUALIZAR_USUARIO(?,?,?,?,?)");
+            cs.setString(1, usuarioDTO.getUsernamae());
+            cs.setInt(2, usuarioDTO.getMontoMaximo());
+            cs.setInt(3, usuarioDTO.getMontoMinimo());
+            cs.setInt(4, usuarioDTO.getId_rol());
+            cs.registerOutParameter(5, java.sql.Types.INTEGER);
+
+            cs.execute();
+            int res = cs.getInt(5);
+            System.out.println(res);
+            if (res == 1) {
+                respuesta = true;
+            }
+
+        } catch (SQLException ex) {
+            printSQLException(ex);
+        } finally {
+            con.close();
+            cs.close();
+        }
+
+        return respuesta;
     }
 
     public void printSQLException(SQLException ex) {

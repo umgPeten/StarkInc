@@ -51,8 +51,8 @@
                                     </thead>
                                     <tbody>
                                         <%
-                                           ArrayList<UsuarioDTO> usuarios = new UsuarioDao().get_usuarios();
-                                           UsuarioDTO userDTO;
+                                            ArrayList<UsuarioDTO> usuarios = new UsuarioDao().get_usuarios(id_rol);
+                                            UsuarioDTO userDTO;
                                             Iterator iterador = usuarios.iterator();
                                             while (iterador.hasNext()) {
                                                 userDTO = (UsuarioDTO) iterador.next();
@@ -64,8 +64,8 @@
                                             <th><%out.println(userDTO.getApellido());%></th>
                                             <th><%out.println(userDTO.getDepartamento().getDepartamento());%></th>
                                             <th><%out.println(userDTO.getRol());%></th>
-                                            <th><button type="submit" class="btn btn-info btn-group-sm"><li class="material-icons">edit</li></button></th>
-                                            <th><button type="submit" class="btn btn-danger btn-group-sm"><li class="material-icons">delete</li></button></th>
+                                            <th><a href="<%=request.getContextPath()%>/servEmpleados?accion=editar&usuario=<%out.println(userDTO.getUsernamae());%>&id_rol=<%out.println(id_rol);%>"><button type="submit" class="btn btn-info btn-group-sm"><li class="material-icons">edit</li></button></a></th>
+                                            <th><button type="submit" class="btn btn-danger btn-group-sm" data-toggle="modal" data-target="#eliminarUsuario" data-whatever="@mdo"><li class="material-icons">delete</li></button></th>
 
                                         </tr>
                                         <%
@@ -99,14 +99,14 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form id="form_validation" action="<%=request.getContextPath()%>/servEmpleados" method="POST" class="was-validate">
+                                            <form id="form_validation" action="<%=request.getContextPath()%>/servEmpleados?&id_rol=<%out.println(id_rol);%>" method="POST" class="was-validate">
                                                 <div class="form-group">
                                                     <label for="inputChequera">Usuario</label>
                                                     <select id="inputCuenta" class="form-control" name="id_empleado">
                                                         <option selected>Seleccione al Usuario</option>
                                                         <%
                                                             Empleado emp;
-                                                            ArrayList<Empleado> empleados = userDAO.obtenerEmpleados(2);
+                                                            ArrayList<Empleado> empleados = UsuarioDao.getInstancia().obtenerEmpleados(2, id_rol);
                                                             iterador = empleados.iterator();
                                                             while (iterador.hasNext()) {
                                                                 emp = (Empleado) iterador.next();
@@ -125,7 +125,7 @@
                                                         <option selected>Seleccione</option>
                                                         <%
                                                             Rol rol;
-                                                            ArrayList<Rol> roles = PuestosDAO.getInstancia().getRoles();
+                                                            ArrayList<Rol> roles = PuestosDAO.getInstancia().getRoles(id_rol);
                                                             iterador = roles.iterator();
                                                             while (iterador.hasNext()) {
                                                                 rol = (Rol) iterador.next();
@@ -176,6 +176,27 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div class="modal" id="eliminarUsuario" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Eliminar Usuario</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Esta seguro que desea eliminar al usuario?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </section>
@@ -186,3 +207,12 @@
         <script src="js/plugins/node-waves/waves.js"></script>
     </body>
 </html>
+
+<%
+    if(this.id_rol != 1){
+        System.out.println(id_rol);
+        System.out.println("Sin privilegios, redirigiendo a inicio");
+        response.sendRedirect("inicio.jsp");
+        
+    }
+%>

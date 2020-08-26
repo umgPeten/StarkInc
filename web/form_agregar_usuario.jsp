@@ -12,7 +12,7 @@
 
         <script type="text/javascript">
             function combo_departamento() {
-                $(#)
+                $()
             }
 
         </script>
@@ -36,7 +36,7 @@
                     </div>
 
                     <div class="body">
-                        <form id="form_validation" action="<%=request.getContextPath()%>/servEmpleados" method="POST" class="was-validate">
+                        <form id="form_validation" action="<%=request.getContextPath()%>/servEmpleados?id_rol=<%out.println(id_rol);%>" method="POST" class="was-validate">
                             <div class="row clearfix">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -148,7 +148,7 @@
                                                 <%
                                                     Departamento departamento;
                                                     PuestosDAO puestosDAO = new PuestosDAO();
-                                                    ArrayList<Departamento> puestos = puestosDAO.getDepartamentos();
+                                                    ArrayList<Departamento> puestos = puestosDAO.getDepartamentos(id_rol);
                                                     Iterator it = puestos.iterator();
                                                     while (it.hasNext()) {
                                                         departamento = (Departamento) it.next();
@@ -169,7 +169,12 @@
                                             <label>Puestos</label>
                                             <select id="inputRol" class="form-control" name="puesto">
                                                 <option selected>Seleccione el puesto</option>
-                                                <option value="1">Administrador</option>             
+                                                <option value="1">Administrador</option>    
+                                                <option value="2">Pagos</option>    
+                                                <option value="3">Cajero</option>    
+                                                <option value="4">Auditor</option>    
+                                                <option value="5">Gerencia</option>    
+                                                <option value="6">Jefe de Pagos</option>    
                                             </select>
                                         </div>
                                     </div>    

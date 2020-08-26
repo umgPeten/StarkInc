@@ -17,7 +17,7 @@ public class LoginDao {
     private ResultSet rs;
     private CallableStatement cs;
     private static LoginDao instancia;
-    private PreparedStatement ps;
+
 
     public static LoginDao getInstancia() {
         if (instancia == null) {
@@ -26,12 +26,15 @@ public class LoginDao {
         return instancia;
     }
 
+    /*
+    Hace la validacion para el Login
+    */
     public boolean validate(Login login) throws SQLException {
         boolean acceso = false;
         try {
             con = Conexion.getInstancia().Conectar();
 
-            cs = con.prepareCall("{call validateLogin(?,?,?)}");
+            cs = con.prepareCall("{call ADMINISTRADOR.validateLogin(?,?,?)}");
 
             cs.registerOutParameter(1, java.sql.JDBCType.INTEGER);
             cs.setString(2, login.getUsername());

@@ -45,7 +45,7 @@
                                             <th>Apellido</th>
                                             <th>Direccion</th>
                                             <th>telefono</th>
-                                            <th>Puesto</th>
+                                            
                                             <th>Departamento</th>
                                             <th>Ver más</th>
                                             <th>Editar</th>
@@ -56,7 +56,7 @@
                                         <%
                                             ArrayList<Empleado> empleados = new ArrayList<Empleado>();
                                             Empleado emp = new Empleado();
-                                            empleados = userDAO.obtenerEmpleados(1);
+                                            empleados = UsuarioDao.getInstancia().obtenerEmpleados(1, id_rol);
                                             Iterator iterador = empleados.iterator();
                                             while (iterador.hasNext()) {
                                                 emp = (Empleado) iterador.next();
@@ -68,7 +68,7 @@
                                             <th><%out.println(emp.getApellido());%></th>
                                             <th><%out.println(emp.getDireccion());%></th>
                                             <th><%out.println(emp.getTelefono());%></th>
-                                            <th><%out.println(emp.getPuesto().getPuesto());%></th>
+                                   
                                             <th><%out.println(emp.getPuesto().getDepartamento().getDepartamento());%></th>
                                             <th><button type="submit" class="btn btn-group-sm btn-light "><li class="material-icons">find_in_page</li></button></th>
                                             <th><button type="submit" class="btn btn-info btn-group-sm"><li class="material-icons">edit</li></button></th>
@@ -112,7 +112,7 @@
                                                     <select id="inputCuenta" class="form-control" name="id_empleado">
                                                         <option selected>Seleccione al Usuario</option>
                                                         <%
-                                                            empleados = userDAO.obtenerEmpleados(2);
+                                                            empleados = UsuarioDao.getInstancia().obtenerEmpleados(2, id_rol);
                                                             iterador = empleados.iterator();
                                                             while (iterador.hasNext()) {
                                                                 emp = (Empleado) iterador.next();
@@ -131,7 +131,7 @@
                                                         <option selected>Seleccione</option>
                                                         <%
                                                             Rol rol;
-                                                            ArrayList<Rol> roles = PuestosDAO.getInstancia().getRoles();
+                                                            ArrayList<Rol> roles = PuestosDAO.getInstancia().getRoles(id_rol);
                                                             iterador = roles.iterator();
                                                             while (iterador.hasNext()) {
                                                                 rol = (Rol) iterador.next();

@@ -43,6 +43,8 @@
                                             <th>Numero Cuenta</th>
                                             <th>Banco</th>
                                             <th>Stock</th>
+                                            <th class="align-center">Generar Cheque</th>
+                                            <th class="align-center">Ver Cheques</th>
                                         </tr>
                                     </thead>
 
@@ -50,7 +52,7 @@
                                         <%
                                             ChequeraDAO chequeraDAO = new ChequeraDAO();
                                             Chequera chequera = new Chequera();
-                                            ArrayList<Chequera> chequeras = chequeraDAO.getChequera();
+                                            ArrayList<Chequera> chequeras = chequeraDAO.getChequera(id_rol, null, null);
                                             Iterator it = chequeras.iterator();
                                             while (it.hasNext()) {
 
@@ -65,7 +67,9 @@
                                             <th><%out.println(numero_cuenta);%></th>
                                             <th><%out.println(banco);%></th>
                                             <th><%out.println(chequera.getStock());%></th>
-
+                                            <th class="align-center"><a href="<%=request.getContextPath()%>/cheques?accion=generar_cheque&id_chequera=<%out.println(chequera.getId());%>&id_rol=<%out.println(id_rol);%>"><button type="submit" class="btn btn-primary "><i class="material-icons">payment</i></button></a></th>
+                                            <th class="align-center"><a href="<%=request.getContextPath()%>/cheques?accion=ver_cheques&id_chequera=<%out.println(chequera.getId());%>&id_rol=<%out.println(id_rol);%>&usuario=<%out.println(this.username);%>"><button type="submit" class="btn btn-light "><i class="material-icons">find_in_page</i></button></a></th>
+                                            
                                         </tr>
                                         <%
                                             }
@@ -95,14 +99,14 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form id="form_validation" action="<%=request.getContextPath()%>/cheques" method="POST" class="was-validate">
+                                            <form id="form_validation" action="<%=request.getContextPath()%>/cheques?id_rol=<%out.println(id_rol);%>" method="POST" class="was-validate">
                                                 <div class="form-group">
                                                     <label for="inputChequera">Numero de Cuenta</label>
                                                     <select id="inputCuenta" class="form-control" name="num_cuenta">
                                                         <option selected>Seleccion el numero de cuenta</option>
                                                         <%
                                                             CuentaDAO cuentaDAO = new CuentaDAO();
-                                                            ArrayList<Cuenta> cuentas = cuentaDAO.getCuentas();
+                                                            ArrayList<Cuenta> cuentas = cuentaDAO.getCuentas(id_rol);
                                                             Iterator iteCuentas = cuentas.iterator();
                                                             Cuenta cuenta = new Cuenta();
                                                             while (iteCuentas.hasNext()) {
@@ -118,7 +122,7 @@
                                                     </select>
 
                                                 </div>
-
+                                                    
                                                 <div class="form-group">
                                                     <div class="form-line">
                                                         <label>#ID Chequera</label>

@@ -17,7 +17,8 @@ import umg.negocio.Rol;
  * @author mikesb
  */
 public class PuestosDAO {
-
+    //Estas variables globales se usan para mandar como parametro
+    //para obtener los datos deseados, ya sea departamentos, puestos o roles
     public static final int DEPARTAMENTOS = 1;
     public static final int PUESTOS = 2;
     public static final int ROLES = 3;
@@ -34,13 +35,13 @@ public class PuestosDAO {
         return instancia;
     }
 
-     public ArrayList<Departamento> getDepartamentos() throws SQLException {
-        con = Conexion.getInstancia().Conectar();
+     public ArrayList<Departamento> getDepartamentos(int id_rol) throws SQLException {
+        con = Conexion.getInstancia().Conectar(id_rol);
         ArrayList<Departamento> departamentos = new ArrayList<>();
         Departamento departamento;
 
         try {
-            cs = con.prepareCall("{call GET_DEPA_PUESTO_ROL(?,?,?)}");
+            cs = con.prepareCall("{call ADMINISTRADOR.GET_DEPA_PUESTO_ROL(?,?,?)}");
             cs.registerOutParameter(1, java.sql.JDBCType.REF_CURSOR);
             cs.setInt(2, DEPARTAMENTOS);
             cs.setInt(3, 0);
@@ -64,13 +65,13 @@ public class PuestosDAO {
         return departamentos;
     }
     
-    public ArrayList<Puesto> getPuestos(int id_departamento) throws SQLException {
-        con = Conexion.getInstancia().Conectar();
+    public ArrayList<Puesto> getPuestos(int id_departamento, int id_rol) throws SQLException {
+        con = Conexion.getInstancia().Conectar(id_rol);
         ArrayList<Puesto> puestos = new ArrayList<>();
         Puesto puesto;
 
         try {
-            cs = con.prepareCall("{call GET_DEPA_PUESTO_ROL(?,?,?)}");
+            cs = con.prepareCall("{call ADMINISTRADOR.GET_DEPA_PUESTO_ROL(?,?,?)}");
             cs.registerOutParameter(1, java.sql.JDBCType.REF_CURSOR);
             cs.setInt(2, PUESTOS);
             cs.setInt(3, id_departamento);
@@ -94,13 +95,13 @@ public class PuestosDAO {
         return puestos;
     }
 
-    public ArrayList<Rol> getRoles() throws SQLException {
+    public ArrayList<Rol> getRoles(int id_rol) throws SQLException {
         ArrayList<Rol> roles = new ArrayList<>();
         Rol rol;
         con = Conexion.getInstancia().Conectar();
         try {
             
-            cs = con.prepareCall("{call GET_DEPA_PUESTO_ROL(?,?,?)}");
+            cs = con.prepareCall("{call ADMINISTRADOR.GET_DEPA_PUESTO_ROL(?,?,?)}");
             cs.registerOutParameter(1, java.sql.JDBCType.REF_CURSOR);
             cs.setInt(2, ROLES);
             cs.setInt(3, 0);

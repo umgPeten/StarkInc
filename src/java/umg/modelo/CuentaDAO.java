@@ -26,12 +26,15 @@ public class CuentaDAO {
         return instancia;
     }
 
-    public ArrayList<Cuenta> getCuentas() {
-        con = Conexion.getInstancia().Conectar();
+    /*
+        metodo para obtener todas las cuentas
+    */
+    public ArrayList<Cuenta> getCuentas(int id_rol) {
+        con = Conexion.getInstancia().Conectar(id_rol);
 
         ArrayList<Cuenta> cuentas = new ArrayList<>();
         try {
-            cs = con.prepareCall("{call OBTENERCUENTAS(?)}");
+            cs = con.prepareCall("{call ADMINISTRADOR.OBTENERCUENTAS(?)}");
             cs.registerOutParameter(1, java.sql.JDBCType.REF_CURSOR);
             cs.execute();
 

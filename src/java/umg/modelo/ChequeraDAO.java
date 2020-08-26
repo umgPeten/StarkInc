@@ -13,6 +13,11 @@ import umg.negocio.Cuenta;
  *
  * @author mikesb
  */
+
+/*
+    En este clase es la que se encarga de ejecutar los procedimientos almacenados
+    relacionados con una chequera
+ */
 public class ChequeraDAO {
 
     private Connection con;
@@ -27,13 +32,16 @@ public class ChequeraDAO {
         return instancia;
     }
 
-    public boolean insertarChequera(Chequera chequera, String cuenta) throws SQLException {
-        con = Conexion.getInstancia().Conectar();
+    /*
+        Metodo para insertar una chequera
+     */
+    public boolean insertarChequera(Chequera chequera, String cuenta, int id_rol) throws SQLException {
+        con = Conexion.getInstancia().Conectar(id_rol);
         boolean insertado = false;
         int exito = 0;
         try {
 
-            cst = con.prepareCall("{call insertar_chequera(?,?,?,?,?)}");
+            cst = con.prepareCall("{call ADMINISTRADOR.insertar_chequera(?,?,?,?,?)}");
             cst.setString(1, chequera.getId());
             cst.setString(2, cuenta);
             cst.setInt(3, chequera.getInicio());
@@ -54,15 +62,21 @@ public class ChequeraDAO {
         return insertado;
     }
 
-    public ArrayList<Chequera> getChequera() throws SQLException {
-        con = Conexion.getInstancia().Conectar();
+    /*
+        Metodo para consultar las chequeras
+     */
+    public ArrayList<Chequera> getChequera(int id_rol, String id_chequera, String numero_cuenta) throws SQLException {
+        con = Conexion.getInstancia().Conectar(id_rol);
         ArrayList<Chequera> chequeras = new ArrayList<>();
         Cuenta cuenta;
         Chequera chequera;
         Banco banco;
+        System.out.println("toy aca");
         try {
-            cst = con.prepareCall("{call get_chequeras(?)}");
+            cst = con.prepareCall("{call ADMINISTRADOR.get_chequeras(?,?,?)}");
             cst.registerOutParameter(1, java.sql.JDBCType.REF_CURSOR);
+            cst.setString(2, id_chequera);
+            cst.setString(3, numero_cuenta);
             cst.execute();
 
             rs = (ResultSet) cst.getObject(1);
@@ -78,6 +92,7 @@ public class ChequeraDAO {
                 cuenta.setBanco(banco);
                 chequera.setCuenta(cuenta);
                 chequeras.add(chequera);
+                System.out.println(chequera);
             }
 
         } catch (SQLException ex) {

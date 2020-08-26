@@ -52,7 +52,7 @@
                                         <%
                                             CuentaDAO cuentaDAO = new CuentaDAO();
                                             Cuenta cuenta = new Cuenta();
-                                            ArrayList<Cuenta> cuentas = cuentaDAO.getCuentas();
+                                            ArrayList<Cuenta> cuentas = cuentaDAO.getCuentas(id_rol);
                                             Iterator itCuetas = cuentas.iterator();
                                             while (itCuetas.hasNext()) {
                                                 cuenta = (Cuenta) itCuetas.next();
